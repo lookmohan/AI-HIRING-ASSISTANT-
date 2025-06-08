@@ -78,18 +78,18 @@ if st.session_state.step == "form":
     st.write("Welcome to TalentScout! Let's start with some basic information.")
     
     with st.form("candidate_form"):
-    cols = st.columns(3)
-    with cols[0]:
-        full_name = st.text_input("Full Name*", placeholder="John Doe")
-        email = st.text_input("Email*", placeholder="john@example.com")
-    with cols[1]:
-        phone = st.text_input("Phone*", placeholder="+1 1234567890")
-        experience = st.number_input("Experience (Years)*", min_value=0, max_value=50)
-    with cols[2]:
-        role = st.text_input("Position*", placeholder="Software Engineer")
-        location = st.text_input("Location*", placeholder="City, Country")
-    
-    submitted = st.form_submit_button("Continue →")
+        cols = st.columns(3)
+        with cols[0]:
+            full_name = st.text_input("Full Name*", placeholder="John Doe")
+            email = st.text_input("Email*", placeholder="john@example.com")
+        with cols[1]:
+            phone = st.text_input("Phone*", placeholder="+1 1234567890")
+            experience = st.number_input("Experience (Years)*", min_value=0, max_value=50)
+        with cols[2]:
+            role = st.text_input("Position*", placeholder="Software Engineer")
+            location = st.text_input("Location*", placeholder="City, Country")
+        
+        submitted = st.form_submit_button("Continue →")
 
     if submitted:
         errors = []
