@@ -9,7 +9,7 @@ load_dotenv()
 
 # Configure page
 st.set_page_config(
-    page_title="TalentScout Hiring Assistant",
+    page_title="AI-Powered Interview Assistant | TalentScout",
     page_icon="🤖",
     layout="wide"
 )
@@ -78,17 +78,18 @@ if st.session_state.step == "form":
     st.write("Welcome to TalentScout! Let's start with some basic information.")
     
     with st.form("candidate_form"):
-        cols = st.columns(2)
-        with cols[0]:
-            full_name = st.text_input("Full Name*", placeholder="John Doe")
-            email = st.text_input("Email Address*", placeholder="john@example.com")
-            phone = st.text_input("Phone Number*", placeholder="+1 1234567890")
-        with cols[1]:
-            experience = st.number_input("Years of Experience*", min_value=0, max_value=50)
-            role = st.text_input("Desired Position(s)*", placeholder="Software Engineer")
-            location = st.text_input("Current Location*", placeholder="City, Country")
-        
-        submitted = st.form_submit_button("Continue →")
+    cols = st.columns(3)
+    with cols[0]:
+        full_name = st.text_input("Full Name*", placeholder="John Doe")
+        email = st.text_input("Email*", placeholder="john@example.com")
+    with cols[1]:
+        phone = st.text_input("Phone*", placeholder="+1 1234567890")
+        experience = st.number_input("Experience (Years)*", min_value=0, max_value=50)
+    with cols[2]:
+        role = st.text_input("Position*", placeholder="Software Engineer")
+        location = st.text_input("Location*", placeholder="City, Country")
+    
+    submitted = st.form_submit_button("Continue →")
 
     if submitted:
         errors = []
