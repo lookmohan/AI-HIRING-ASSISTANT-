@@ -1,0 +1,6 @@
+streamlit
+python-dotenv
+requests
+huggingface_hub
+transformers
+torch
