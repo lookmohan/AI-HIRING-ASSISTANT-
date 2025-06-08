@@ -129,9 +129,7 @@ Prompts are designed to:
 
 ## 📽️ Demo
 
-![Demo Thumbnail](https://img.youtube.com/vi/VIDEO_ID/0.jpg)
-
-> Replace `VIDEO_ID` with your actual YouTube video ID if available.
+https://youtu.be/EyXEFM4siJg
 
 ## 📄 License
 
